@@ -1,0 +1,25 @@
+strategy: threshold
+defaults:
+  factor: factor_momentum_24h
+  buy_threshold: 1.0
+  sell_threshold: -1.0
+  position_size: 0.1
+  hold_max_bars: null
+  allow_short: false
+  normalization: none
+  trend_factor: null
+  trend_long_min: null
+  trend_short_max: null
+  max_positions: null
+parameter_sets:
+  - name: conservative
+    params:
+      buy_threshold: 1.5
+      sell_threshold: -1.5
+      position_size: 0.05
+  - name: permissive
+    params:
+      buy_threshold: 0.5
+      sell_threshold: -0.5
+      position_size: 0.1
+      allow_short: true

@@ -1,0 +1,8 @@
+Module 7 – 文档与帮助
+
+更新 README、Qlib_pipeline.md 及任何相关文档，新增对 --bar-freq 的说明：支持的频率格式、默认值、目录结构示例（含 Binance Data V3.0\6.Binance Data Resampled\<bar-freq>\）、回退策略，以及 horizon=bar 数的解释。
+调整所有 CLI --help 输出，描述 --bar-freq 参数用途、默认值、示例输入，并提示可选值需符合 pandas 频率字符串。
+在文档中列出不同频率下的输出目录命名示例，强调多频率运行时的隔离与兼容性影响（例如新增 <bar-freq> 子目录）。
+为用户提供运行 --bar-freq 3min 全流程的示例命令（step0~step4），并提示日志中可查验的关键点。
+若引入新的测试或验证命令，补充运行方式、预期输出和故障排查提示。
+明确说明默认不传 --bar-freq 时保持 1min 行为，并提醒用户如目录缺失会回退或报错，方便升级路径。

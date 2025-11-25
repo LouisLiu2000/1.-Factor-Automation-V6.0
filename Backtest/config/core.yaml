@@ -1,0 +1,15 @@
+defaults:
+  cash: 1000000
+  commission:
+    model: percent
+    value: 0.0005
+  slippage:
+    model: percent
+    value: 0.0005
+  cash_buffer: 0.2
+  max_positions: 30
+  rebalance_frequency: 5
+  data_root: "C:/Users/User/Desktop/Binance Data V3.0"
+  datahub_root: "DataHub"
+  results_root: "Backtest/results"
+  log_level: INFO

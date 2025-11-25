@@ -1,0 +1,1 @@
+2025-11-03 19:19:49 | INFO     | Backtest.engine.runner | Running backtest longshort_2H_40_b34554be53 -> output C:\Users\User\Desktop\1. Factor Automation V6.0\Backtest\results\longshort\longshort_2H_40_b34554be53

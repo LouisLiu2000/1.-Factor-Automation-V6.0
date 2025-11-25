@@ -1,0 +1,118 @@
+角色设定：你是负责搭建完整因子预计算与截面策略回测体系的高级工程师，使用 Backtrader 作为回测框架。必须时刻关注鲁棒性、可审计性和可扩展性，从目录结构到运行命令都要严谨定义并验证。
+
+目标与总体架构
+
+把工程拆分为三个互不耦合的子项目：
+FactorFoundry/：因子预计算管线，只负责读取行情原始数据，输出标准化的因子文件与元数据。
+Backtest/：回测执行框架，读取行情和因子数据，提供 TopK、Long-Short、Threshold 三种截面策略模板以及参数扫描能力。
+Factor Evaluation/：因子表现评估与分析模块，只读取 DataHub 中的因子文件，不与其他工程共享代码。
+通过一个公共的只读数据仓库 DataHub/factors/<timeframe>/<factor_set>/<symbol>.parquet 交换信息；DataHub/metadata/<timeframe>/<factor_set>.json 存放元数据。任何项目都不得直接引用另一个项目的源代码。
+数据与文件规范
+
+原始行情位于 C:\Users\User\Desktop\Binance Data V3.0\6.Binance Data Resampled/<timeframe>/，例如 2H/1INCH_2020_12_25_1000_1608890400000_Fullversion_2H.csv，列包括：
+open_time,open,high,low,close,volume,close_time,quote_asset_volume,number_of_trades,taker_buy_base_volume,taker_buy_quote_volume,premium_open,premium_high,premium_low,premium_close,premium_close_time。
+Backtrader 需要秒级 datetime，注意 CSV 中的时间戳为毫秒；在 loader 中统一转换，并确保时区一致（UTC）。
+因子文件格式建议使用 Parquet，列设置：timestamp（ISO8601 或 epoch 秒）、symbol、各因子列（小写下划线，含窗口信息，如 factor_momentum_24h）、可选 tradable_flag。缺失值用 NaN 表示不可交易，不允许用 magic number。
+元数据 metadata.json 至少记录：
+factor_set, timeframe, source_data_path, code_version/commit, generation_time, columns, start_time, end_time, notes。
+运行前必须校验：数据文件存在、因子时间范围覆盖回测区间、列名匹配、没有重复时间戳。
+FactorFoundry 要求
+
+目录建议：
+FactorFoundry/
+  pipelines/          # 因子计算脚本
+  jobs/               # 批次任务、调度脚本
+  utils/              # 读取行情、公共函数
+  config/             # 因子定义、参数
+  logs/
+每个因子集对应一个配置文件，定义所需时间窗口、数据列、填补策略。
+输出必须写到 DataHub/factors/...；日志记录在 FactorFoundry/logs/。
+使用批处理或 CLI 脚本支持增量/全量更新，确保重复运行不会破坏已有输出；若需要覆盖旧文件，先备份或写到新版本目录。
+对缺失数据、异常值做明确处理：可以在 metadata 记录丢失比例；出现时间错位、数据缺失时发出警告。
+Backtest 要求
+
+目录草案：
+Backtest/
+  data/
+    loader.py         # 行情与因子加载 DataBundle
+    feeds.py          # Backtrader 自定义数据源
+  strategies/
+    base.py           # CrossSectionStrategy 抽象
+    topk.py
+    longshort.py
+    threshold.py
+  engine/
+    runner.py         # 单次回测
+    sweep.py          # 参数网格/随机搜索
+    logger.py
+  config/
+    core.yaml         # 全局配置（手续费、滑点、初始资金等）
+    strategies/
+      topk.yaml
+      longshort.yaml
+      threshold.yaml
+  results/
+    index.json        # 记录 run_id 与输出目录
+  tests/
+    fixtures/
+    test_*.py
+  run_backtest.py
+loader.DataBundle：
+接收 symbols, start, end, timeframe, factor_set, factor_columns。
+自动定位行情 CSV 与因子 Parquet，完成时间对齐（默认取交集，可选前向填充或剔除），把因子附加到 Backtrader feed 的 lines。
+对 IO 做缓存和异常处理（缺文件立即报错并给出建议路径）。
+策略基类 CrossSectionStrategy：
+控制调仓频率、持仓上限、资金缓冲、手续费模型。
+next() 收集所有数据的最新因子值，过滤 NaN 或 tradable_flag=False，调用子类 generate_target_weights()。
+内置常见的风险控制：最大仓位限制、现金不足检查、仓位平衡。
+统一日志：输出每次调仓的排名、权重、被剔除原因。
+策略实现：
+TopK：参数 k, weighting（equal/score）、min_factor, max_positions。
+Long-Short：参数 long_quantile, short_quantile, gross_exposure, hedge_ratio, weighting。确保多空权重求和=0。
+Threshold：参数 buy_threshold, sell_threshold, position_size, hold_max_bars, allow_short。
+参数管理：
+CLI 支持 --param k=5 --param weighting=score，可选加载 YAML parameter_sets。
+sweep.py 读取配置进行批量运行，结果放 results/<strategy>/<run_id>/，run_id 由策略名、参数、timeframe、symbols、因子集、日期拼接后哈希。
+输出：
+metrics.json（收益、年化波动、Sharpe、最大回撤、总交易笔数、胜率等）
+equity_curve.csv, positions.csv, orders.csv, logs.txt
+可选 trade_summary.csv（每次调仓的目标权重 vs 实际成交）。
+日志需包含：运行参数、数据来源、因子集版本、回测耗时、警告信息（例如缺因子、延迟填补）。
+支持命令示例：
+python run_backtest.py --start 2021-01-01 --end 2021-03-01 --timeframe 2H --symbols BTCUSDT,ETHUSDT --factor-set core_momentum__2025-10-07 --strategy topk --param k=5 --param weighting=equal。
+Factor Evaluation 要求
+
+只负责读取 DataHub 的因子与行情（如需），计算因子 IC、收益排序、分组表现等。
+保持独立目录结构，可共享 loader 逻辑但必须复制代码或制作轻量工具，避免交叉依赖。
+输出分析报告（Markdown/Notebook），记录评估参数与版本，支持历史审计。
+鲁棒性与审计
+
+所有入口脚本必须检查：路径存在、CSV/Parquet 可读、时间范围足够、列名匹配；出现任何问题立即抛异常，并给出清晰错误消息。
+应对缺失数据：
+明确策略默认行为（跳过调仓还是比例缩减）；
+对局部缺失写入日志，并在 metrics.json 中追加 data_quality 字段。
+建立统一 logging 机制（Python logging），支持 --log-level 调整。日志内容要足以复现流程（参数、起止时间、因子名、路径）。
+回测结果目录要包含 run_context.json，写入运行时间、Git 版本、Python 依赖版本（可用 pip freeze 摘要），便于审计。
+若引入缓存或并行，确保线程/进程安全，避免共享状态污染。
+编写 pytest：
+loader 单元测试：毫秒→秒转换正确、缺失数据处理符合预期。
+策略测试：小样本确保 TopK 仅持 K 个，Long-Short 多空抵消，Threshold 能在阈值上下翻转。
+集成烟囱测试：使用 fixtures 跑一次迷你回测，并核对输出文件是否齐全。
+为未来扩展准备：在配置中预留佣金模型（百分比、固定费用）、滑点模型、基准对照（可添加回测 analyzer）。
+采用一致编码规范（PEP8），仅在必要处加解释性注释；保持 ASCII。
+禁止事项与常见错误预防
+
+不要让 FactorFoundry、Backtest、Factor Evaluation 互相 import；仅通过 DataHub 交换。
+不要把回测输出写进原始数据目录；所有结果和日志都必须放在各自工程内部或指定结果目录。
+不要忽略时间戳单位转换；确认所有数据均为 UTC，无 DST 问题。
+不要在调仓逻辑中直接使用未过滤的 NaN；必须在基类统一过滤。
+不要在策略里硬编码路径或参数；全部通过配置和 CLI 注入。
+不要覆盖已有因子文件；需要更新时创建新 factor_set 版本或先备份。
+运行批量参数时，要限制并发数量，避免 Backtrader 内存泄漏或文件句柄耗尽。
+交付标准
+
+完整实现目录结构与脚本，能从 CLI 运行因子预计算、单次回测、参数扫描。
+提供 README 或操作手册，详细说明数据准备、命令示例、输出解释。
+包含基础测试并可在本地运行通过。
+所有关键配置、日志、结果均具备版本信息，满足审计需求。
+只要严格按照以上要求执行，即可构建出可维护、可追溯、可扩展的因子回测体系。

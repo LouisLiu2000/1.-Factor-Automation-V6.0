@@ -1,0 +1,8 @@
+Module 2 – 数据载入兼容
+
+在 step1_contract_and_golden.py 及其 qlib 版本中，根据 --bar-freq 首先拼出新目录 C:\Users\User\Desktop\Binance Data V3.0\6.Binance Data Resampled\<bar-freq>\，只匹配 *_Fullversion_<bar-freq>.csv 文件。
+若该目录不存在或找不到匹配文件，回退到旧目录 4.Binance Data Merged\Data 寻找 *_Fullversion.csv，同时记录 WARN 级别日志说明发生回退及原因。
+更新 SafePathManager 或路径验证逻辑，允许新的频率目录结构并继续阻止写入未授权位置；支持多频率输出时避免路径冲突。
+确保读写流程中 bar_freq 能传递下来，用于构造输出目录、过滤数据、生成日志前缀等。
+对于不支持的频率（例如目录缺失且无旧数据回退），抛出明确的错误信息（包含 freq、期望路径、符号等），防止静默失败。
+在代码中保留必要的 INFO 级日志，记录加载频率、实际使用的目录以及找到的文件数量，用于后续排查。

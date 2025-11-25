@@ -1,0 +1,22 @@
+strategy: longshort
+defaults:
+  factor: factor_momentum_24h
+  long_quantile: 0.3
+  short_quantile: 0.3
+  gross_exposure: 1.0
+  weighting: equal
+  hedge_ratio: 1.0
+  max_positions: null
+parameter_sets:
+  - name: balanced_q30
+    params:
+      long_quantile: 0.3
+      short_quantile: 0.3
+      gross_exposure: 1.0
+      weighting: equal
+  - name: aggressive_q20
+    params:
+      long_quantile: 0.2
+      short_quantile: 0.2
+      gross_exposure: 1.5
+      weighting: score

@@ -1,0 +1,1 @@
+VOLTREND_COMPOSITE = rank(zscore(clip(where(abs((ema(close,24)-ema(close,96))/(abs(ema(close,96))+0.000001))>0.0005, sign((ema(close,24)-ema(close,96))/(abs(ema(close,96))+0.000001)) * (ts_std(logret(close,1),18)/(ts_std(logret(close,1),72)+0.000001)) * zscore(ts_std(logret(close,1),18),200), 0), -4, 4), 200))

@@ -1,0 +1,58 @@
+你是一名长期维护 <Factor Automation V5.0> 项目的高级 Python 工程师，熟悉 pandas、时序因子回测、面向批处理的 CLI 脚手架。项目当前流水线（step0~step4 及其 qlib 对应脚本）完全基于 1 分钟 K 线设计：`EXPECTED_FREQ = "1min"`、`freq="1min"`、`pd.Timedelta(minutes=1)`、`date_range_minutes` 等硬编码普遍存在于 step0_prepare_inputs*.py、step1_contract_and_golden*.py、step2_loader_and_qc*.py、step3_factor_engine_04.py、step4_factor_evaluation*.py 以及 test_qlib_integration.py。日志、覆盖率判定、黄金样本生成、因子计算、标签计算都写死为 1 分钟粒度。此外，step1_contract_and_golden.py:182 只会在 `4.Binance Data Merged\Data` 路径下查找 `*_Fullversion.csv`，无法识别新准备的多周期数据。
+
+**数据来源变更**  
+新的多周期全量数据位于 `C:\Users\User\Desktop\Binance Data V3.0\6.Binance Data Resampled\`（原 `4.Binance Data Merged\Data` 中仍保留 1 分钟旧数据以兼容历史流程）。该目录按粒度拆分子目录：例如 `1min\`, `3min\`, `5min\`, `10min\`, `15min\`, `30min\`, `60min`（即 1H）, `2H`, `4H`, `8H` 等。每个子目录内的文件命名为 `<symbol>_<起始日期>_<批次>_<毫秒时间戳>_Fullversion_<period>.csv`（如 `1INCH_2020_12_25_1000_1608890400000_Fullversion_15min.csv`）。
+
+**目标**  
+把整个流水线扩展为“可配置 K 线频率”，确保在传入 `--bar-freq` 时，从准备数据、计算因子到结果评估都能使用对应频率的数据；默认仍保持 1min。
+
+**详细要求**
+
+1. **参数与配置统一**  
+   - 给 step0~step4 及 qlib 版本脚本（如 step0_prepare_inputs_qlib_01.py、step1_contract_and_golden_qlib_02.py 等）新增统一的 `--bar-freq` 参数，默认 `1min`。解析后需要全流程传递。  
+   - 所有硬编码 `EXPECTED_FREQ`, `freq="1min"`, `pd.Timedelta(minutes=1)` 以及任何 `date_range_minutes`/`Timedelta(minutes=...)` 逻辑都要改为基于 `bar_freq` 缓存一个 offset，例如 `offset = pd.tseries.frequencies.to_offset(bar_freq)`，然后用 `offset.delta` 或 `pd.Timedelta(offset)` 处理；不允许再出现字符串写死的 "1min"。  
+   - 明确说明 horizon/窗口依旧指“多少根 bar”，并在 CLI `--help` 或 README/文档中补充：不同频率下 horizon=5 表示 5 根 bar，对应实际分钟数为 offset * 5。
+
+2. **数据读取兼容**  
+   - step1_contract_and_golden.py 及其 qlib 版本中，先根据 `--bar-freq` 组装 resampled 目录路径（`Binance Data V3.0\6.Binance Data Resampled\<bar-freq>\`），在该目录下匹配 `*_Fullversion_<bar-freq>.csv`。  
+   - 若指定频率目录不存在或未找到匹配文件，保持兼容旧逻辑：回退到 `4.Binance Data Merged\Data` 查找 `*_Fullversion.csv`，并给出 WARN 级别日志提示正在回退。  
+   - 所有 SafePathManager 或路径拼接逻辑需要能接受新的目录结构，同时继续阻止写到非授权路径。注意处理不同频率输出时的冲突问题。
+
+3. **索引/时间计算调整**  
+   - step2_loader_and_qc.py 的 `date_range_minutes` 等函数要改名/重构为基于 offset 的通用生成器；覆盖率计算、缺口检测要用动态 freq。`Timedelta(minutes=1)` 需要改为 `offset`.  
+   - step3_factor_engine_04.py 中构建黄金行情 (`full_index`) 的逻辑、滚动窗口、rank/ic 统计等需改成 offset 驱动。尤其要检查 `pd.Timedelta(minutes=24*60-1)` 等全天常数，改为 `pd.Timedelta(days=1) - offset` 或根据一天内 bar 数动态计算。  
+   - step4_factor_evaluation.py 的标签生成 (`generate_labels`) 和 `load_close_history` 里的 horizon → 时间跨度映射要以 bar 为单位；若需要取 future bar，需要用 `offset * horizon`。  
+   - 所有地方的默认 `EXPECTED_FREQ` 常量改为从参数注入。尽量把频率相关逻辑集中在一个 helper 或配置对象内，避免重复。
+
+4. **输出隔离与命名**  
+   - 各步骤生成的输出（例如 golden/base、labels、factors、reports、config_snapshots、tests）要在路径或文件名中编码 `bar-freq`（比如 `.../golden/<bar-freq>/base_{symbol}_{date}.parquet` 或 `.../base_{symbol}_{date}_{bar-freq}.parquet`）。确保不同频率不会互相覆盖旧结果，同时 SafePathManager 校验依旧有效。  
+   - 更新任何文档/说明（如 Qlib_pipeline.md）的参数表，说明新增 `--bar-freq` 及目录结构。
+
+5. **异常处理与日志**  
+   - 当某个频率的数据缺失、覆盖率不足或文件无法匹配时，要有详细日志（INFO/WARN/ERROR 级别）指明符号、日期、期望目录等。  
+   - 在 CLI 层若给出不支持的频率（例如 `7min` 而没有对应目录），需要给出清晰错误并退出。  
+   - 兼容之前的 `--strict-readonly`、`SafePathManager` 等安全约束，不要破坏原有的防御式设计。
+
+6. **测试与验证**  
+   - 至少新增一条 3min 数据的小型测试（单元或集成均可），验证：  
+     a. step1~step4 在 `--bar-freq 3min` 下能读取对应数据并产出 bar-aligned 输出；  
+     b. 覆盖率、标签、因子或报告中没有 1min 的残留。  
+   - 现有测试/脚本也要更新以接受 `--bar-freq`，默认 `1min` 时需保持原状。  
+   - 无法运行真实完整流水线时，给出如何执行测试的说明。
+
+7. **文档与帮助信息**  
+   - 更新 README/Qlib_pipeline.md 或新增一节，描述多频率支持：数据目录结构示例、参数说明、默认行为与回退策略。  
+   - CLI `--help` 里补上 `--bar-freq` 及可选值提示。
+
+8. **交付说明**  
+   - 完成后在响应中列出涉及的文件和关键改动（逻辑层面即可，如“step2_loader_and_qc.py: 重构覆盖率计算，使用动态 offset”）。  
+   - 提供一个使用 `--bar-freq 3min` 的全流程示例命令（从 step0 到 step4，或能跑通最关键的步骤）。  
+   - 标明潜在兼容性影响（例如：输出路径结构变化、旧脚本若不传 `--bar-freq` 是否仍可运行、回退逻辑限制）。
+
+**实现约束与风格**  
+- 代码仍应保持原先的防御式设计（例如 SafePathManager、SecurityViolation），注释要精炼。  
+- 频率字符串要支持 pandas 认可的常见格式（`1min`, `3min`, `1H`, `2H`, `4H`, `8H` 等），并允许未来扩展。  
+- 需要时可以新增 utility 模块集中处理频率相关逻辑，但保持改动范围适当，不要无谓重构。  
+- 如果某些推导复杂，请在代码中添加简洁注释说明。
+
+请在整个流程中严格按照上述要求完成多时间粒度支持，并在最终答复中提供验证步骤和注意事项。

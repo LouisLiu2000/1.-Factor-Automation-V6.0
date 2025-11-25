@@ -1,0 +1,3 @@
+2025-10-10 16:49:17 | INFO     | __main__ | Logging initialised at FactorFoundry\logs\prepare_composite_mom60_v1_60min_20251010084917.log
+2025-10-10 16:49:17 | INFO     | __main__ | Starting factor preparation | timeframe=60min | factor_set=composite_mom60_v1 | symbols=1INCH,AAVE,ADA,ALGO,ALPHA,ATOM,AVAX,AXS,BAND,BAT,BCH,BEL,BNB,BTC,COMP,CRV,DASH,DOGE,DOT,EGLD,ENJ,ETC,ETH,FIL,FLM,GRT,ICX,IOST,IOTA,KAVA,KNC,KSM,LINK,LRC,LTC,NEAR,NEO,ONT,QTUM,RLC,RSR,RUNE,SKL,SNX,SOL,STORJ,SUSHI,SXP,THETA,TRB,TRX,UNI,VET,XLM,XMR,XRP,XTZ,YFI,ZEC,ZEN,ZIL,ZRX
+2025-10-10 16:49:17 | INFO     | __main__ | Processing symbol 1INCH

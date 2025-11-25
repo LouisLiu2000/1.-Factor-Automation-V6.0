@@ -1,0 +1,8 @@
+odule 3 – 时间索引与窗口
+
+重构 step2_loader_and_qc.py 中基于时间的工具函数（例如 date_range_minutes、覆盖率/缺口检测逻辑），让它们以 bar_freq 对应的 pandas offset 驱动；支持 offset * n_bars 的时间跨度，而非硬编码分钟数。
+检查 step3_factor_engine_04.py 和 qlib 版的黄金行情构建、滚动窗口、IC/Rank 等统计逻辑，替换 pd.Timedelta(minutes=...)、24*60-1 等常量，使用 offset 或 pd.Timedelta(days=1) - offset、bars_per_day = pd.Timedelta(days=1) / offset 等动态计算。
+在 step4_factor_evaluation.py 里，将标签生成 (generate_labels) 和历史行情抓取 (load_close_history) 改写为基于 bar 数处理 horizon；未来的时间跨度应采用 offset * horizon，并确保标签对齐正确。
+将这些脚本中残留的 EXPECTED_FREQ, freq="1min" 等常量移除，改为从模块参数或共享配置接收 bar_freq/offset；确保统一缓存 offset，避免重复构造。
+对全天或多日窗口的推导添加简洁注释，说明如何从 bar 频率计算所需的时间范围，帮助后续维护。
+保持现有防御性检查（数据对齐、缺失值判断等），在使用动态 offset 后验证逻辑仍然成立

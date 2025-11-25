@@ -1,0 +1,129 @@
+2025-10-07 21:58:35 | INFO     | __main__ | Logging initialised at FactorFoundry\logs\prepare_mfi14_v1_4H_20251007135835.log
+2025-10-07 21:58:35 | INFO     | __main__ | Starting factor preparation | timeframe=4H | factor_set=mfi14_v1 | symbols=1INCH,AAVE,ADA,ALGO,ALPHA,ATOM,AVAX,AXS,BAND,BAT,BCH,BEL,BNB,BTC,COMP,CRV,DASH,DOGE,DOT,EGLD,ENJ,ETC,ETH,FIL,FLM,GRT,ICX,IOST,IOTA,KAVA,KNC,KSM,LINK,LRC,LTC,NEAR,NEO,ONT,QTUM,RLC,RSR,RUNE,SKL,SNX,SOL,STORJ,SUSHI,SXP,THETA,TRB,TRX,UNI,VET,XLM,XMR,XRP,XTZ,YFI,ZEC,ZEN,ZIL,ZRX
+2025-10-07 21:58:36 | INFO     | __main__ | Processing symbol 1INCH
+2025-10-07 21:58:36 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\1INCH.parquet (8767 rows)
+2025-10-07 21:58:36 | INFO     | __main__ | Processing symbol AAVE
+2025-10-07 21:58:36 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\AAVE.parquet (8767 rows)
+2025-10-07 21:58:36 | INFO     | __main__ | Processing symbol ADA
+2025-10-07 21:58:36 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ADA.parquet (8767 rows)
+2025-10-07 21:58:36 | INFO     | __main__ | Processing symbol ALGO
+2025-10-07 21:58:36 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ALGO.parquet (8767 rows)
+2025-10-07 21:58:36 | INFO     | __main__ | Processing symbol ALPHA
+2025-10-07 21:58:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ALPHA.parquet (8767 rows)
+2025-10-07 21:58:37 | INFO     | __main__ | Processing symbol ATOM
+2025-10-07 21:58:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ATOM.parquet (8767 rows)
+2025-10-07 21:58:37 | INFO     | __main__ | Processing symbol AVAX
+2025-10-07 21:58:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\AVAX.parquet (8767 rows)
+2025-10-07 21:58:37 | INFO     | __main__ | Processing symbol AXS
+2025-10-07 21:58:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\AXS.parquet (8767 rows)
+2025-10-07 21:58:37 | INFO     | __main__ | Processing symbol BAND
+2025-10-07 21:58:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\BAND.parquet (8767 rows)
+2025-10-07 21:58:38 | INFO     | __main__ | Processing symbol BAT
+2025-10-07 21:58:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\BAT.parquet (8767 rows)
+2025-10-07 21:58:38 | INFO     | __main__ | Processing symbol BCH
+2025-10-07 21:58:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\BCH.parquet (8767 rows)
+2025-10-07 21:58:38 | INFO     | __main__ | Processing symbol BEL
+2025-10-07 21:58:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\BEL.parquet (8767 rows)
+2025-10-07 21:58:38 | INFO     | __main__ | Processing symbol BNB
+2025-10-07 21:58:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\BNB.parquet (8767 rows)
+2025-10-07 21:58:39 | INFO     | __main__ | Processing symbol BTC
+2025-10-07 21:58:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\BTC.parquet (8767 rows)
+2025-10-07 21:58:39 | INFO     | __main__ | Processing symbol COMP
+2025-10-07 21:58:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\COMP.parquet (8767 rows)
+2025-10-07 21:58:39 | INFO     | __main__ | Processing symbol CRV
+2025-10-07 21:58:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\CRV.parquet (8767 rows)
+2025-10-07 21:58:39 | INFO     | __main__ | Processing symbol DASH
+2025-10-07 21:58:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\DASH.parquet (8767 rows)
+2025-10-07 21:58:39 | INFO     | __main__ | Processing symbol DOGE
+2025-10-07 21:58:40 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\DOGE.parquet (8767 rows)
+2025-10-07 21:58:40 | INFO     | __main__ | Processing symbol DOT
+2025-10-07 21:58:40 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\DOT.parquet (8767 rows)
+2025-10-07 21:58:40 | INFO     | __main__ | Processing symbol EGLD
+2025-10-07 21:58:40 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\EGLD.parquet (8767 rows)
+2025-10-07 21:58:40 | INFO     | __main__ | Processing symbol ENJ
+2025-10-07 21:58:40 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ENJ.parquet (8767 rows)
+2025-10-07 21:58:40 | INFO     | __main__ | Processing symbol ETC
+2025-10-07 21:58:40 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ETC.parquet (8767 rows)
+2025-10-07 21:58:40 | INFO     | __main__ | Processing symbol ETH
+2025-10-07 21:58:41 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ETH.parquet (8767 rows)
+2025-10-07 21:58:41 | INFO     | __main__ | Processing symbol FIL
+2025-10-07 21:58:41 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\FIL.parquet (8767 rows)
+2025-10-07 21:58:41 | INFO     | __main__ | Processing symbol FLM
+2025-10-07 21:58:41 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\FLM.parquet (8767 rows)
+2025-10-07 21:58:41 | INFO     | __main__ | Processing symbol GRT
+2025-10-07 21:58:41 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\GRT.parquet (8767 rows)
+2025-10-07 21:58:41 | INFO     | __main__ | Processing symbol ICX
+2025-10-07 21:58:42 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ICX.parquet (8767 rows)
+2025-10-07 21:58:42 | INFO     | __main__ | Processing symbol IOST
+2025-10-07 21:58:42 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\IOST.parquet (8767 rows)
+2025-10-07 21:58:42 | INFO     | __main__ | Processing symbol IOTA
+2025-10-07 21:58:43 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\IOTA.parquet (8767 rows)
+2025-10-07 21:58:43 | INFO     | __main__ | Processing symbol KAVA
+2025-10-07 21:58:43 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\KAVA.parquet (8767 rows)
+2025-10-07 21:58:43 | INFO     | __main__ | Processing symbol KNC
+2025-10-07 21:58:43 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\KNC.parquet (8767 rows)
+2025-10-07 21:58:43 | INFO     | __main__ | Processing symbol KSM
+2025-10-07 21:58:43 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\KSM.parquet (8767 rows)
+2025-10-07 21:58:43 | INFO     | __main__ | Processing symbol LINK
+2025-10-07 21:58:44 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\LINK.parquet (8767 rows)
+2025-10-07 21:58:44 | INFO     | __main__ | Processing symbol LRC
+2025-10-07 21:58:44 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\LRC.parquet (8767 rows)
+2025-10-07 21:58:44 | INFO     | __main__ | Processing symbol LTC
+2025-10-07 21:58:44 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\LTC.parquet (8767 rows)
+2025-10-07 21:58:44 | INFO     | __main__ | Processing symbol NEAR
+2025-10-07 21:58:44 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\NEAR.parquet (8767 rows)
+2025-10-07 21:58:44 | INFO     | __main__ | Processing symbol NEO
+2025-10-07 21:58:45 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\NEO.parquet (8767 rows)
+2025-10-07 21:58:45 | INFO     | __main__ | Processing symbol ONT
+2025-10-07 21:58:45 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ONT.parquet (8767 rows)
+2025-10-07 21:58:45 | INFO     | __main__ | Processing symbol QTUM
+2025-10-07 21:58:45 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\QTUM.parquet (8767 rows)
+2025-10-07 21:58:45 | INFO     | __main__ | Processing symbol RLC
+2025-10-07 21:58:45 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\RLC.parquet (8767 rows)
+2025-10-07 21:58:45 | INFO     | __main__ | Processing symbol RSR
+2025-10-07 21:58:46 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\RSR.parquet (8767 rows)
+2025-10-07 21:58:46 | INFO     | __main__ | Processing symbol RUNE
+2025-10-07 21:58:46 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\RUNE.parquet (8767 rows)
+2025-10-07 21:58:46 | INFO     | __main__ | Processing symbol SKL
+2025-10-07 21:58:46 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\SKL.parquet (8767 rows)
+2025-10-07 21:58:46 | INFO     | __main__ | Processing symbol SNX
+2025-10-07 21:58:47 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\SNX.parquet (8767 rows)
+2025-10-07 21:58:47 | INFO     | __main__ | Processing symbol SOL
+2025-10-07 21:58:47 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\SOL.parquet (8767 rows)
+2025-10-07 21:58:47 | INFO     | __main__ | Processing symbol STORJ
+2025-10-07 21:58:47 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\STORJ.parquet (8767 rows)
+2025-10-07 21:58:47 | INFO     | __main__ | Processing symbol SUSHI
+2025-10-07 21:58:47 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\SUSHI.parquet (8767 rows)
+2025-10-07 21:58:47 | INFO     | __main__ | Processing symbol SXP
+2025-10-07 21:58:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\SXP.parquet (8767 rows)
+2025-10-07 21:58:48 | INFO     | __main__ | Processing symbol THETA
+2025-10-07 21:58:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\THETA.parquet (8767 rows)
+2025-10-07 21:58:48 | INFO     | __main__ | Processing symbol TRB
+2025-10-07 21:58:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\TRB.parquet (8767 rows)
+2025-10-07 21:58:48 | INFO     | __main__ | Processing symbol TRX
+2025-10-07 21:58:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\TRX.parquet (8767 rows)
+2025-10-07 21:58:49 | INFO     | __main__ | Processing symbol UNI
+2025-10-07 21:58:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\UNI.parquet (8767 rows)
+2025-10-07 21:58:49 | INFO     | __main__ | Processing symbol VET
+2025-10-07 21:58:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\VET.parquet (8767 rows)
+2025-10-07 21:58:49 | INFO     | __main__ | Processing symbol XLM
+2025-10-07 21:58:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\XLM.parquet (8767 rows)
+2025-10-07 21:58:49 | INFO     | __main__ | Processing symbol XMR
+2025-10-07 21:58:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\XMR.parquet (8767 rows)
+2025-10-07 21:58:50 | INFO     | __main__ | Processing symbol XRP
+2025-10-07 21:58:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\XRP.parquet (8767 rows)
+2025-10-07 21:58:50 | INFO     | __main__ | Processing symbol XTZ
+2025-10-07 21:58:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\XTZ.parquet (8767 rows)
+2025-10-07 21:58:50 | INFO     | __main__ | Processing symbol YFI
+2025-10-07 21:58:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\YFI.parquet (8767 rows)
+2025-10-07 21:58:51 | INFO     | __main__ | Processing symbol ZEC
+2025-10-07 21:58:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ZEC.parquet (8767 rows)
+2025-10-07 21:58:51 | INFO     | __main__ | Processing symbol ZEN
+2025-10-07 21:58:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ZEN.parquet (8767 rows)
+2025-10-07 21:58:51 | INFO     | __main__ | Processing symbol ZIL
+2025-10-07 21:58:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ZIL.parquet (8767 rows)
+2025-10-07 21:58:52 | INFO     | __main__ | Processing symbol ZRX
+2025-10-07 21:58:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\4H\mfi14_v1\ZRX.parquet (8767 rows)
+2025-10-07 21:58:52 | INFO     | __main__ | Metadata written to C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\metadata\4H\mfi14_v1.json
+2025-10-07 21:58:52 | INFO     | __main__ | Preparation completed | factor_set=mfi14_v1 | symbols=62 | total_rows=543554
+2025-10-07 21:58:52 | INFO     | __main__ | Preparation summary: {"factor_set": "mfi14_v1", "timeframe": "4H", "symbols": ["1INCH", "AAVE", "ADA", "ALGO", "ALPHA", "ATOM", "AVAX", "AXS", "BAND", "BAT", "BCH", "BEL", "BNB", "BTC", "COMP", "CRV", "DASH", "DOGE", "DOT", "EGLD", "ENJ", "ETC", "ETH", "FIL", "FLM", "GRT", "ICX", "IOST", "IOTA", "KAVA", "KNC", "KSM", "LINK", "LRC", "LTC", "NEAR", "NEO", "ONT", "QTUM", "RLC", "RSR", "RUNE", "SKL", "SNX", "SOL", "STORJ", "SUSHI", "SXP", "THETA", "TRB", "TRX", "UNI", "VET", "XLM", "XMR", "XRP", "XTZ", "YFI", "ZEC", "ZEN", "ZIL", "ZRX"], "rows_per_symbol": {"1INCH": 8767, "AAVE": 8767, "ADA": 8767, "ALGO": 8767, "ALPHA": 8767, "ATOM": 8767, "AVAX": 8767, "AXS": 8767, "BAND": 8767, "BAT": 8767, "BCH": 8767, "BEL": 8767, "BNB": 8767, "BTC": 8767, "COMP": 8767, "CRV": 8767, "DASH": 8767, "DOGE": 8767, "DOT": 8767, "EGLD": 8767, "ENJ": 8767, "ETC": 8767, "ETH": 8767, "FIL": 8767, "FLM": 8767, "GRT": 8767, "ICX": 8767, "IOST": 8767, "IOTA": 8767, "KAVA": 8767, "KNC": 8767, "KSM": 8767, "LINK": 8767, "LRC": 8767, "LTC": 8767, "NEAR": 8767, "NEO": 8767, "ONT": 8767, "QTUM": 8767, "RLC": 8767, "RSR": 8767, "RUNE": 8767, "SKL": 8767, "SNX": 8767, "SOL": 8767, "STORJ": 8767, "SUSHI": 8767, "SXP": 8767, "THETA": 8767, "TRB": 8767, "TRX": 8767, "UNI": 8767, "VET": 8767, "XLM": 8767, "XMR": 8767, "XRP": 8767, "XTZ": 8767, "YFI": 8767, "ZEC": 8767, "ZEN": 8767, "ZIL": 8767, "ZRX": 8767}, "data_quality": {"money_flow_index_14": 0.0}, "metadata_path": "C:\\Users\\User\\Desktop\\1. Factor Automation V6.0\\DataHub\\metadata\\4H\\mfi14_v1.json", "factor_directory": "C:\\Users\\User\\Desktop\\1. Factor Automation V6.0\\DataHub\\factors\\4H\\mfi14_v1", "columns": ["timestamp", "money_flow_index_14", "tradable_flag"], "total_rows": 543554}

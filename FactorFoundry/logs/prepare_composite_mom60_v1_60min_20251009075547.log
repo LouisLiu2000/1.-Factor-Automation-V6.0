@@ -1,0 +1,4 @@
+2025-10-09 15:55:47 | INFO     | __main__ | Logging initialised at FactorFoundry\logs\prepare_composite_mom60_v1_60min_20251009075547.log
+2025-10-09 15:55:47 | INFO     | __main__ | Starting factor preparation | timeframe=60min | factor_set=composite_mom60_v1 | symbols=1INCH,AAVE,ADA,ALGO,ALPHA,ATOM,AVAX,AXS,BAND,BAT,BCH,BEL,BNB,BTC,COMP,CRV,DASH,DOGE,DOT,EGLD,ENJ,ETC,ETH,FIL,FLM,GRT,ICX,IOST,IOTA,KAVA,KNC,KSM,LINK,LRC,LTC,NEAR,NEO,ONT,QTUM,RLC,RSR,RUNE,SKL,SNX,SOL,STORJ,SUSHI,SXP,THETA,TRB,TRX,UNI,VET,XLM,XMR,XRP,XTZ,YFI,ZEC,ZEN,ZIL,ZRX
+2025-10-09 15:55:47 | INFO     | __main__ | Processing symbol 1INCH
+2025-10-09 15:55:47 | ERROR    | __main__ | Factor computation failed for 1INCH: 不允许的标识符: mom_7d

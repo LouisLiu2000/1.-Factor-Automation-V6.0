@@ -1,0 +1,4 @@
+2025-11-03 20:14:20 | INFO     | __main__ | Logging initialised at FactorFoundry\logs\prepare_adaptive_trend_revert_v1_2H_20251103121420.log
+2025-11-03 20:14:20 | INFO     | __main__ | Starting factor preparation | timeframe=2H | factor_set=adaptive_trend_revert_v1 | symbols=BTC,ETH,BCH,XRP,LTC,TRX,ETC,LINK,XLM,ADA,XTZ,ATOM,BNB,IOTA,VET,NEO,QTUM,THETA,ALGO,COMP,DOGE,SXP,DOT,CRV,TRB,SUSHI,RUNE,SOL,UNI,AVAX,NEAR,FIL,AAVE,RSR,AXS,ZEN,SKL,GRT,CHZ,SAND
+2025-11-03 20:14:20 | INFO     | __main__ | Processing symbol BTC
+2025-11-03 20:14:20 | ERROR    | __main__ | Factor computation failed for BTC: DSL 语法错误: unmatched ')'

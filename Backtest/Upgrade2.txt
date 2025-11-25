@@ -1,0 +1,86 @@
+角色设定：
+你是一名自动化工程师，负责从原始 Binance CSV 生成回测所需的价格/因子数据并运行 Backtrader 策略。流程拆分为阶段 A（数据准备 + 因子预计算）与阶段 B（策略回测），两阶段必须遵循完全一致的参数接口；此外，阶段 A 要支持 DSL（领域特定语言）来描述并批量生成因子。
+
+通用参数接口（阶段 A/B 共享）：
+- timeframe（如 2H、1H）
+- symbols（逗号分隔或数组）
+- start / end（回测时间范围）
+- factor_set（写入 DataHub 的因子版本标识）
+- data_root（原始行情路径，默认 `C:\Users\User\Desktop\Binance Data V3.0`）
+- datahub_root（因子输出根目录，默认 `DataHub`）
+- 其他可选：factor_columns、strategy、策略参数等。阶段 A 若需要额外参数（如 DSL 定义、因子窗口长度），在 DSL 中声明；阶段 B 直接引用阶段 A 生成的产物。
+
+阶段 A：数据准备 + 因子预计算
+1. 输入：
+   - 原始数据目录：`C:\Users\User\Desktop\Binance Data V3.0\6.Binance Data Resampled/<timeframe>/`
+   - CSV 列固定：open_time,open,high,low,close,volume,close_time,quote_asset_volume,number_of_trades,taker_buy_base_volume,taker_buy_quote_volume,premium_open,premium_high,premium_low,premium_close,premium_close_time
+   - 参数：timeframe, symbols, start, end, factor_set, data_root, datahub_root, DSL 配置
+
+2. DSL 说明：
+   - 采用 YAML/JSON-like 描述自定义因子流程，例如：
+     ```
+     factors:
+       - name: mfi14
+         source: step3_factor_engine_04.MFI
+         params:
+           window: 14
+           price_fields: [high, low, close]
+           volume_field: volume
+       - name: custom_factor
+         formula: "(close - open) / open"
+     ```
+   - DSL 可引用 `Factor Evaluation/step3_factor_engine_04.py` 中的函数或内嵌公式；若引用函数，需明确模块路径与参数；若使用公式，需保证字段已在价格数据中可用。
+   - 阶段 A 解析 DSL 后，执行对应的因子计算，结果写入 `DataHub/factors/<timeframe>/<factor_set>/<symbol>.parquet`。列至少包含：
+     - timestamp（UTC 秒或 ISO8601）
+     - 所有 DSL 定义的因子列（小写下划线命名）
+     - 可选 tradable_flag
+   - 若 DSL 中定义多因子，全部写入同一 Parquet（按列区分）。
+
+3. 工作流程：
+   a. 校验输入参数与目录，确保 symbols 的 CSV 存在、时间范围覆盖 start/end。
+   b. 读取原始 CSV，转换毫秒时间戳为 UTC Datetime，检测重复/缺失，记录日志。
+   c. 根据 DSL 生成因子：可复用 `step3_factor_engine_04.py` 的核心函数，或按 DSL 公式计算。
+   d. 生成回测所需价格数据，确保与因子时间戳对齐。
+   e. 输出 Parquet 与 metadata（`DataHub/metadata/<timeframe>/<factor_set>.json`），字段包括：factor_set、timeframe、source_data_path、generation_time、code_version/commit、columns、start_time、end_time、notes、数据质量统计等。
+   f. 所有日志写入 `FactorFoundry/logs/`，遇到缺失/异常立即报错并给出修复建议。
+   g. 写操作需幂等：重复执行时不要覆盖旧版本，可在 factor_set 或目录中加入版本号/时间戳。
+
+阶段 B：策略回测
+1. 输入：与阶段 A 相同的参数接口（timeframe, symbols, start, end, factor_set, data_root, datahub_root），外加策略名和参数（可来自 YAML）。
+2. 流程：
+   a. 使用 `Backtest/run_backtest.py`（或等价入口）接受参数：
+      ```
+      python run_backtest.py \
+        --start <start> \
+        --end <end> \
+        --timeframe <timeframe> \
+        --symbols <symbol_list> \
+        --factor-set <factor_set> \
+        --strategy <strategy_name> \
+        --factor-columns <comma_separated_factors_if_needed> \
+        --param key=value ...
+        [--data-root ...] [--datahub-root ...] [--results-tag ...]
+      ```
+   b. Loader 仅从 DataHub 读取阶段 A 输出（价格+因子），若缺失则提示先执行阶段 A。
+   c. 运行策略后输出：
+      - `metrics.json`, `equity_curve.csv`, `positions.csv`, `orders.csv`, `logs.txt`
+      - `run_context.json`（记录本次参数、因子 metadata 版本、Python/平台信息）
+      - 更新 `Backtest/results/index.json`
+   d. 日志输出目录：`Backtest/results/<strategy>/<run_id>/`；run_id 需包含 factor_set/timeframe/symbols 等信息以便追溯。
+   e. 在结果中引用阶段 A metadata（例如 generation_time、code_version）以保证审计。
+
+通用要求：
+- 参数一致性：阶段 A/B 使用统一 CLI/配置结构；若新增参数（如 DSL 文件路径），需在两个阶段的入口声明（阶段 B 可忽略但允许透传）。
+- 数据校验：出现缺失列、重复时间戳、时间覆盖不足、数据类型错误等情况必须报错并停止；若有修复建议，写入日志与终端提示。
+- DSL 执行需安全：严格限定可用函数和公式，避免执行任意代码；若 DSL 引用的函数不存在，输出明确错误。
+- 编码规范：读写文件一律 UTF-8；列名保持 ASCII；日志包含时间戳与级别。
+- 幂等性与版本控制：生成因子或回测结果时，优先新建目录而非覆盖旧文件；metadata 中写明来源和版本。
+- 结束汇总：每次完整流程结束时输出总览，包含：
+  * 数据覆盖时间段
+  * 生成的因子列表/数量
+  * 缺失值或异常比例
+  * 回测重要指标（年化、波动、Sharpe、最大回撤等）
+  * 结果目录路径
+- 遇到无法满足条件的情况（例如缺失原始数据），立即停止并给出详细问题说明。
+
+按上述 Prompt 执行时，阶段 A 和 B 的参数保持一致，DSL 自定义因子流程可拓展复用，确保回测系统的可复现性与可维护性。

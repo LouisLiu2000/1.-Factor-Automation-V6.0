@@ -1,0 +1,12 @@
+{
+  "start_cash": 1000000.0,
+  "final_value": 1580212.284509512,
+  "total_return": 0.5802122845095119,
+  "annual_return": 22.348886828607085,
+  "annual_volatility": 2.008775153782852,
+  "sharpe_ratio": 0.3641930146636478,
+  "max_drawdown": 69.34080088760075,
+  "max_drawdown_bars": 15925,
+  "total_trades": 16524,
+  "win_rate": 0.43530622125393365
+}

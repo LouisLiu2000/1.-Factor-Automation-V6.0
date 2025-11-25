@@ -1,0 +1,10 @@
+你要把 <Factor Automation V5.0> 的整条 step0~step4（含 qlib 版本）流水线从“固定 1 分钟 K 线”升级为“可配置 K 线频率”。新的多周期原始数据放在 C:\Users\User\Desktop\Binance Data V3.0\6.Binance Data Resampled\<bar-freq>\，例如 1min\, 3min\, 5min\, 1H 等；文件格式为 <symbol>_<起始日期>_<批次>_<毫秒时间戳>_Fullversion_<period>.csv。你的目标是让 CLI 传入 --bar-freq 时，全流程（准备输入、合同与黄金样本、加载与质检、因子计算、评估、测试、文档）都使用对应频率的数据；默认不传仍走 1min；并保持防御式安全设计、输出隔离、详细日志、回退旧目录等要求，同时新增 3min 测试和文档更新。
+
+Module 1 – 频率参数总线
+
+在 step0~step4 及他们的 qlib 版入口中统一增加 --bar-freq 参数，默认 1min，并确保解析后能传递给后续模块。
+实现一个集中频率助手（例如 utils/frequency.py），使用 pd.tseries.frequencies.to_offset(bar_freq) 做参数校验和缓存，并提供转换接口（offset、timedelta、bar 数 → 时间跨度等）。
+把脚本中所有写死的 "1min", pd.Timedelta(minutes=1), date_range_minutes 等替换成对该频率助手的调用。
+调整函数签名/内部逻辑，让 horizon、窗口、覆盖率等操作基于 bar 数 + offset，而不是固定分钟。
+更新 CLI --help 和相关文档说明：默认 1min，可选值需符合 pandas 频率格式；horizon=“多少根 bar”。
+确保低风险：默认行为等同旧逻辑；若用户传入不被 pandas 支持的频率，要抛清晰错误并停止执行。

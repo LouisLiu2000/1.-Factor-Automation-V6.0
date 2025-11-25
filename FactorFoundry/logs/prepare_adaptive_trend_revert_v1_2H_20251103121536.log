@@ -1,0 +1,85 @@
+2025-11-03 20:15:36 | INFO     | __main__ | Logging initialised at FactorFoundry\logs\prepare_adaptive_trend_revert_v1_2H_20251103121536.log
+2025-11-03 20:15:36 | INFO     | __main__ | Starting factor preparation | timeframe=2H | factor_set=adaptive_trend_revert_v1 | symbols=BTC,ETH,BCH,XRP,LTC,TRX,ETC,LINK,XLM,ADA,XTZ,ATOM,BNB,IOTA,VET,NEO,QTUM,THETA,ALGO,COMP,DOGE,SXP,DOT,CRV,TRB,SUSHI,RUNE,SOL,UNI,AVAX,NEAR,FIL,AAVE,RSR,AXS,ZEN,SKL,GRT,CHZ,SAND
+2025-11-03 20:15:36 | INFO     | __main__ | Processing symbol BTC
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\BTC.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol ETH
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\ETH.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol BCH
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\BCH.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol XRP
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\XRP.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol LTC
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\LTC.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol TRX
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\TRX.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol ETC
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\ETC.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol LINK
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\LINK.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol XLM
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\XLM.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol ADA
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\ADA.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol XTZ
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\XTZ.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol ATOM
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\ATOM.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol BNB
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\BNB.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol IOTA
+2025-11-03 20:15:37 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\IOTA.parquet (20125 rows)
+2025-11-03 20:15:37 | INFO     | __main__ | Processing symbol VET
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\VET.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol NEO
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\NEO.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol QTUM
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\QTUM.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol THETA
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\THETA.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol ALGO
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\ALGO.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol COMP
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\COMP.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol DOGE
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\DOGE.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol SXP
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\SXP.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol DOT
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\DOT.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol CRV
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\CRV.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol TRB
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\TRB.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol SUSHI
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\SUSHI.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol RUNE
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\RUNE.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol SOL
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\SOL.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol UNI
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\UNI.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol AVAX
+2025-11-03 20:15:38 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\AVAX.parquet (20125 rows)
+2025-11-03 20:15:38 | INFO     | __main__ | Processing symbol NEAR
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\NEAR.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol FIL
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\FIL.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol AAVE
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\AAVE.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol RSR
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\RSR.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol AXS
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\AXS.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol ZEN
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\ZEN.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol SKL
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\SKL.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol GRT
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\GRT.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol CHZ
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\CHZ.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Processing symbol SAND
+2025-11-03 20:15:39 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\2H\adaptive_trend_revert_v1\SAND.parquet (20125 rows)
+2025-11-03 20:15:39 | INFO     | __main__ | Metadata written to C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\metadata\2H\adaptive_trend_revert_v1.json
+2025-11-03 20:15:39 | INFO     | __main__ | Preparation completed | factor_set=adaptive_trend_revert_v1 | symbols=40 | total_rows=805000
+2025-11-03 20:15:39 | INFO     | __main__ | Preparation summary: {"factor_set": "adaptive_trend_revert_v1", "timeframe": "2H", "symbols": ["BTC", "ETH", "BCH", "XRP", "LTC", "TRX", "ETC", "LINK", "XLM", "ADA", "XTZ", "ATOM", "BNB", "IOTA", "VET", "NEO", "QTUM", "THETA", "ALGO", "COMP", "DOGE", "SXP", "DOT", "CRV", "TRB", "SUSHI", "RUNE", "SOL", "UNI", "AVAX", "NEAR", "FIL", "AAVE", "RSR", "AXS", "ZEN", "SKL", "GRT", "CHZ", "SAND"], "rows_per_symbol": {"BTC": 20125, "ETH": 20125, "BCH": 20125, "XRP": 20125, "LTC": 20125, "TRX": 20125, "ETC": 20125, "LINK": 20125, "XLM": 20125, "ADA": 20125, "XTZ": 20125, "ATOM": 20125, "BNB": 20125, "IOTA": 20125, "VET": 20125, "NEO": 20125, "QTUM": 20125, "THETA": 20125, "ALGO": 20125, "COMP": 20125, "DOGE": 20125, "SXP": 20125, "DOT": 20125, "CRV": 20125, "TRB": 20125, "SUSHI": 20125, "RUNE": 20125, "SOL": 20125, "UNI": 20125, "AVAX": 20125, "NEAR": 20125, "FIL": 20125, "AAVE": 20125, "RSR": 20125, "AXS": 20125, "ZEN": 20125, "SKL": 20125, "GRT": 20125, "CHZ": 20125, "SAND": 20125}, "data_quality": {"adaptive_trend_revert": 0.0}, "metadata_path": "C:\\Users\\User\\Desktop\\1. Factor Automation V6.0\\DataHub\\metadata\\2H\\adaptive_trend_revert_v1.json", "factor_directory": "C:\\Users\\User\\Desktop\\1. Factor Automation V6.0\\DataHub\\factors\\2H\\adaptive_trend_revert_v1", "columns": ["timestamp", "adaptive_trend_revert", "tradable_flag"], "total_rows": 805000}

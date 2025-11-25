@@ -1,0 +1,16 @@
+strategy: topk
+defaults:
+  factor: factor_momentum_24h
+  k: 5
+  weighting: equal
+  min_factor: null
+  max_positions: null
+parameter_sets:
+  - name: k5_equal
+    params:
+      k: 5
+      weighting: equal
+  - name: k10_score
+    params:
+      k: 10
+      weighting: score

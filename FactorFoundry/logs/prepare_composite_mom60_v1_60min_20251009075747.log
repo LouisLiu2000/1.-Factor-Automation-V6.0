@@ -1,0 +1,129 @@
+2025-10-09 15:57:47 | INFO     | __main__ | Logging initialised at FactorFoundry\logs\prepare_composite_mom60_v1_60min_20251009075747.log
+2025-10-09 15:57:47 | INFO     | __main__ | Starting factor preparation | timeframe=60min | factor_set=composite_mom60_v1 | symbols=1INCH,AAVE,ADA,ALGO,ALPHA,ATOM,AVAX,AXS,BAND,BAT,BCH,BEL,BNB,BTC,COMP,CRV,DASH,DOGE,DOT,EGLD,ENJ,ETC,ETH,FIL,FLM,GRT,ICX,IOST,IOTA,KAVA,KNC,KSM,LINK,LRC,LTC,NEAR,NEO,ONT,QTUM,RLC,RSR,RUNE,SKL,SNX,SOL,STORJ,SUSHI,SXP,THETA,TRB,TRX,UNI,VET,XLM,XMR,XRP,XTZ,YFI,ZEC,ZEN,ZIL,ZRX
+2025-10-09 15:57:47 | INFO     | __main__ | Processing symbol 1INCH
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\1INCH.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol AAVE
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\AAVE.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol ADA
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ADA.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol ALGO
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ALGO.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol ALPHA
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ALPHA.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol ATOM
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ATOM.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol AVAX
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\AVAX.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol AXS
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\AXS.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol BAND
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\BAND.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol BAT
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\BAT.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol BCH
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\BCH.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol BEL
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\BEL.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol BNB
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\BNB.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol BTC
+2025-10-09 15:57:48 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\BTC.parquet (35065 rows)
+2025-10-09 15:57:48 | INFO     | __main__ | Processing symbol COMP
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\COMP.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol CRV
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\CRV.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol DASH
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\DASH.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol DOGE
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\DOGE.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol DOT
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\DOT.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol EGLD
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\EGLD.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol ENJ
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ENJ.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol ETC
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ETC.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol ETH
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ETH.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol FIL
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\FIL.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol FLM
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\FLM.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol GRT
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\GRT.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol ICX
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ICX.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol IOST
+2025-10-09 15:57:49 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\IOST.parquet (35065 rows)
+2025-10-09 15:57:49 | INFO     | __main__ | Processing symbol IOTA
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\IOTA.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol KAVA
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\KAVA.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol KNC
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\KNC.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol KSM
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\KSM.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol LINK
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\LINK.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol LRC
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\LRC.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol LTC
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\LTC.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol NEAR
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\NEAR.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol NEO
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\NEO.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol ONT
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ONT.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol QTUM
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\QTUM.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol RLC
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\RLC.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol RSR
+2025-10-09 15:57:50 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\RSR.parquet (35065 rows)
+2025-10-09 15:57:50 | INFO     | __main__ | Processing symbol RUNE
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\RUNE.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol SKL
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\SKL.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol SNX
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\SNX.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol SOL
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\SOL.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol STORJ
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\STORJ.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol SUSHI
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\SUSHI.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol SXP
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\SXP.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol THETA
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\THETA.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol TRB
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\TRB.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol TRX
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\TRX.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol UNI
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\UNI.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol VET
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\VET.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol XLM
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\XLM.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol XMR
+2025-10-09 15:57:51 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\XMR.parquet (35065 rows)
+2025-10-09 15:57:51 | INFO     | __main__ | Processing symbol XRP
+2025-10-09 15:57:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\XRP.parquet (35065 rows)
+2025-10-09 15:57:52 | INFO     | __main__ | Processing symbol XTZ
+2025-10-09 15:57:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\XTZ.parquet (35065 rows)
+2025-10-09 15:57:52 | INFO     | __main__ | Processing symbol YFI
+2025-10-09 15:57:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\YFI.parquet (35065 rows)
+2025-10-09 15:57:52 | INFO     | __main__ | Processing symbol ZEC
+2025-10-09 15:57:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ZEC.parquet (35065 rows)
+2025-10-09 15:57:52 | INFO     | __main__ | Processing symbol ZEN
+2025-10-09 15:57:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ZEN.parquet (35065 rows)
+2025-10-09 15:57:52 | INFO     | __main__ | Processing symbol ZIL
+2025-10-09 15:57:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ZIL.parquet (35065 rows)
+2025-10-09 15:57:52 | INFO     | __main__ | Processing symbol ZRX
+2025-10-09 15:57:52 | INFO     | __main__ | Wrote factor parquet C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\factors\60min\composite_mom60_v1\ZRX.parquet (35065 rows)
+2025-10-09 15:57:52 | INFO     | __main__ | Metadata written to C:\Users\User\Desktop\1. Factor Automation V6.0\DataHub\metadata\60min\composite_mom60_v1.json
+2025-10-09 15:57:52 | INFO     | __main__ | Preparation completed | factor_set=composite_mom60_v1 | symbols=62 | total_rows=2174030
+2025-10-09 15:57:52 | INFO     | __main__ | Preparation summary: {"factor_set": "composite_mom60_v1", "timeframe": "60min", "symbols": ["1INCH", "AAVE", "ADA", "ALGO", "ALPHA", "ATOM", "AVAX", "AXS", "BAND", "BAT", "BCH", "BEL", "BNB", "BTC", "COMP", "CRV", "DASH", "DOGE", "DOT", "EGLD", "ENJ", "ETC", "ETH", "FIL", "FLM", "GRT", "ICX", "IOST", "IOTA", "KAVA", "KNC", "KSM", "LINK", "LRC", "LTC", "NEAR", "NEO", "ONT", "QTUM", "RLC", "RSR", "RUNE", "SKL", "SNX", "SOL", "STORJ", "SUSHI", "SXP", "THETA", "TRB", "TRX", "UNI", "VET", "XLM", "XMR", "XRP", "XTZ", "YFI", "ZEC", "ZEN", "ZIL", "ZRX"], "rows_per_symbol": {"1INCH": 35065, "AAVE": 35065, "ADA": 35065, "ALGO": 35065, "ALPHA": 35065, "ATOM": 35065, "AVAX": 35065, "AXS": 35065, "BAND": 35065, "BAT": 35065, "BCH": 35065, "BEL": 35065, "BNB": 35065, "BTC": 35065, "COMP": 35065, "CRV": 35065, "DASH": 35065, "DOGE": 35065, "DOT": 35065, "EGLD": 35065, "ENJ": 35065, "ETC": 35065, "ETH": 35065, "FIL": 35065, "FLM": 35065, "GRT": 35065, "ICX": 35065, "IOST": 35065, "IOTA": 35065, "KAVA": 35065, "KNC": 35065, "KSM": 35065, "LINK": 35065, "LRC": 35065, "LTC": 35065, "NEAR": 35065, "NEO": 35065, "ONT": 35065, "QTUM": 35065, "RLC": 35065, "RSR": 35065, "RUNE": 35065, "SKL": 35065, "SNX": 35065, "SOL": 35065, "STORJ": 35065, "SUSHI": 35065, "SXP": 35065, "THETA": 35065, "TRB": 35065, "TRX": 35065, "UNI": 35065, "VET": 35065, "XLM": 35065, "XMR": 35065, "XRP": 35065, "XTZ": 35065, "YFI": 35065, "ZEC": 35065, "ZEN": 35065, "ZIL": 35065, "ZRX": 35065}, "data_quality": {"composite_alpha": 0.0}, "metadata_path": "C:\\Users\\User\\Desktop\\1. Factor Automation V6.0\\DataHub\\metadata\\60min\\composite_mom60_v1.json", "factor_directory": "C:\\Users\\User\\Desktop\\1. Factor Automation V6.0\\DataHub\\factors\\60min\\composite_mom60_v1", "columns": ["timestamp", "composite_alpha", "tradable_flag"], "total_rows": 2174030}
